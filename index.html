@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laam Wallet</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wallet-container">
+  <h1>Laam Wallet</h1>
+
+  <div class="wallet-section">
+    <h2>Wallet Keys</h2>
+    <button id="generate-wallet">Generate Wallet</button>
+    <p>Stellar Secret: <span id="stellar-secret"></span></p>
+    <p>BSC Private Key: <span id="bsc-key"></span></p>
+  </div>
+
+  <div class="wallet-section">
+    <h2>Balances</h2>
+    <button id="check-balances">Check Balances</button>
+    <p>XLM Balance: <span id="xlm-balance">0</span></p>
+    <p>BNB Balance: <span id="bnb-balance">0</span></p>
+  </div>
+
+  <div class="wallet-section">
+    <h2>Send Crypto</h2>
+    <label>Chain:
+      <select id="send-chain">
+        <option value="XLM">XLM</option>
+        <option value="BSC">BSC</option>
+      </select>
+    </label>
+    <input type="text" id="recipient" placeholder="Recipient address">
+    <input type="text" id="amount" placeholder="Amount">
+    <button id="send-btn">Send</button>
+    <p id="send-status"></p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/stellar-sdk@8.2.3/dist/stellar-sdk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
